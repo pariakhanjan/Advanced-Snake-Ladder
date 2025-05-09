@@ -1,16 +1,15 @@
+// WildSnake.java
 public class WildSnake extends Snake {
-
-    public WildSnake(int headPositionX, int headPositionY, int tailPositionX, int tailPositionY) {
-        super(headPositionX, headPositionY, tailPositionX, tailPositionY);
+    public WildSnake(int headX, int headY, int tailX, int tailY) {
+        super(headX, headY, tailX, tailY);
     }
 
     @Override
     public void move(Player player) {
-        if (player.getPositionX() == this.getHeadPositionX() && player.getPositionY() == this.getHeadPositionY()) {
-            player.setPositionX(this.getTailPositionX());
-            player.setPositionY(this.getTailPositionY());
+        if (player.getPlayerX() == this.getHeadX() && player.getPlayerY() == this.getHeadY()) {
+            player.setPlayerX(this.getTailX());
+            player.setPlayerY(this.getTailY());
             player.wildSnakeAttack();
         }
     }
-
 }
