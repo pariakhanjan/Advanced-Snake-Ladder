@@ -1,14 +1,12 @@
+// Player.java
 public class Player {
-
-    private int positionX;
-
-    private int positionY;
-
+    private int playerX;
+    private int playerY;
     private int health;
 
     public Player() {
-        this.positionX = 0;
-        this.positionY = 0;
+        this.playerX = 0;
+        this.playerY = 0;
         this.health = 3;
     }
 
@@ -19,26 +17,20 @@ public class Player {
         }
     }
 
-    public void increaseHealth() {
-        if (0 < this.health && this.health < 3) {
-            this.health = this.health + 1;
-        }
+    public int getPlayerX() {
+        return playerX;
     }
 
-    public int getPositionX() {
-        return positionX;
+    public void setPlayerX(int playerX) {
+        this.playerX = playerX;
     }
 
-    public void setPositionX(int positionX) {
-        this.positionX = positionX;
+    public int getPlayerY() {
+        return playerY;
     }
 
-    public int getPositionY() {
-        return positionY;
-    }
-
-    public void setPositionY(int positionY) {
-        this.positionY = positionY;
+    public void setPlayerY(int playerY) {
+        this.playerY = playerY;
     }
 
     public int getHealth() {
