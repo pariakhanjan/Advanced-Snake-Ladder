@@ -1,8 +1,6 @@
-
+// KindSnake.java
 public class KindSnake extends Snake {
-
-    public KindSnake(int headPositionX, int headPositionY, int tailPositionX, int tailPositionY) {
-        super(headPositionX, headPositionY, tailPositionX, tailPositionY);
+    public KindSnake(int headX, int headY, int tailX, int tailY) {
+        super(headX, headY, tailX, tailY);
     }
-
 }
