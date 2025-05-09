@@ -1,21 +1,14 @@
-
+// Grid.java
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.lang.System;
 
 public class Grid {
     private int size;
-
     private ArrayList<Snake> snakes;
-
     private ArrayList<KindSnake> kindSnakes;
-
     private ArrayList<NormalSnake> normalSnakes;
-
     private ArrayList<WildSnake> wildSnakes;
-
     private Player player;
-
 
     public Grid(int size, Player player) {
         this.size = size;
@@ -156,17 +149,17 @@ public class Grid {
     private boolean uniqueSnake(int headX, int headY, int tailX, int tailY) {
         if (snakes.size() > 0) {
             for (Snake value : snakes) {
-                    if (value.getHeadX() == headX && value.getHeadY() == headY) {
-                        return false;
-                    }
-                    if (value.getTailX() == headX && value.getTailY() == headY) {
-                        return false;
-                    }
-                    if (value.getHeadX() == tailX && value.getHeadY() == tailY) {
-                        return false;
-                    }
+                if (value.getHeadX() == headX && value.getHeadY() == headY) {
+                    return false;
+                }
+                if (value.getTailX() == headX && value.getTailY() == headY) {
+                    return false;
+                }
+                if (value.getHeadX() == tailX && value.getHeadY() == tailY) {
+                    return false;
                 }
             }
+        }
         return true;
     }
 
@@ -265,27 +258,22 @@ public class Grid {
     }
 
     public ArrayList<Snake> getSnakes() {
-        ArrayList<Snake> copy = new ArrayList<>(snakes);
-        return copy;
+        return new ArrayList<>(snakes);
     }
 
     public ArrayList<KindSnake> getKindSnakes() {
-        ArrayList<KindSnake> copy = new ArrayList<>(kindSnakes);
-        return copy;
+        return new ArrayList<>(kindSnakes);
     }
 
     public ArrayList<NormalSnake> getNormalSnakes() {
-        ArrayList<NormalSnake> copy = new ArrayList<>(normalSnakes);
-        return copy;
+        return new ArrayList<>(normalSnakes);
     }
 
     public ArrayList<WildSnake> getWildSnakes() {
-        ArrayList<WildSnake> copy = new ArrayList<>(wildSnakes);
-        return copy;
+        return new ArrayList<>(wildSnakes);
     }
 
     public Player getPlayer() {
         return player;
     }
-
 }
