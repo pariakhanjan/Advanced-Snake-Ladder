@@ -1,63 +1,57 @@
-
-
+// Snake.java
 public class Snake {
+    private int headX;
+    private int headY;
+    private int tailX;
+    private int tailY;
 
-    private int headPositionX;
-
-    private int headPositionY;
-
-    private int tailPositionX;
-
-    private int tailPositionY;
-
-    public Snake(int headPositionX, int headPositionY, int tailPositionX, int tailPositionY) {
-        this.headPositionX = headPositionX;
-        this.headPositionY = headPositionY;
-        this.tailPositionX = tailPositionX;
-        this.tailPositionY = tailPositionY;
+    public Snake(int headX, int headY, int tailX, int tailY) {
+        this.headX = headX;
+        this.headY = headY;
+        this.tailX = tailX;
+        this.tailY = tailY;
     }
 
     public void move(Player player) {
-        if (player.getPositionX() == this.headPositionX && player.getPositionY() == this.headPositionY) {
-            player.setPositionX(this.getTailPositionX());
-            player.setPositionY(this.getTailPositionY());
+        if (player.getPlayerX() == this.headX && player.getPlayerY() == this.headY) {
+            player.setPlayerX(this.getTailX());
+            player.setPlayerY(this.getTailY());
         }
     }
 
-    public int getHeadPositionX() {
-        return headPositionX;
+    public String getName() {
+        return getClass().getSimpleName();
     }
 
-    public void setHeadPositionX(int headPositionX) {
-        this.headPositionX = headPositionX;
+    public int getHeadX() {
+        return headX;
     }
 
-    public int getHeadPositionY() {
-        return headPositionY;
+    public void setHeadX(int headX) {
+        this.headX = headX;
     }
 
-    public void setHeadPositionY(int headPositionY) {
-        this.headPositionY = headPositionY;
+    public int getHeadY() {
+        return headY;
     }
 
-    public int getTailPositionX() {
-        return tailPositionX;
+    public void setHeadY(int headY) {
+        this.headY = headY;
     }
 
-    public void setTailPositionX(int tailPositionX) {
-        this.tailPositionX = tailPositionX;
+    public int getTailX() {
+        return tailX;
     }
 
-    public int getTailPositionY() {
-        return tailPositionY;
+    public void setTailX(int tailX) {
+        this.tailX = tailX;
     }
 
-    public void setTailPositionY(int tailPositionY) {
-        this.tailPositionY = tailPositionY;
+    public int getTailY() {
+        return tailY;
     }
 
-    @Override
-    public String toString() {
-        return getClass().getName();
+    public void setTailY(int tailY) {
+        this.tailY = tailY;
     }
 }
