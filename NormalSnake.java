@@ -1,8 +1,6 @@
-
+// NormalSnake.java
 public class NormalSnake extends Snake {
-
-    public NormalSnake(int headPositionX, int headPositionY, int tailPositionX, int tailPositionY) {
-        super(headPositionX, headPositionY, tailPositionX, tailPositionY);
+    public NormalSnake(int headX, int headY, int tailX, int tailY) {
+        super(headX, headY, tailX, tailY);
     }
-    
 }
